@@ -1,16 +1,19 @@
 import org.example.Account;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 
 import static java.lang.System.out;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-import static org.junit.jupiter.api.Assertions.*;
-
-
+@DisplayName("Тест для проверки метода")
 public class TestAccount {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -29,6 +32,9 @@ public class TestAccount {
 
     // проверка метода CheckNameToEmboss при передаче ему валидного имени
     @Test
+    @DisplayName("Тест валидного имени")
+    @Description("проверка метода CheckNameToEmboss при передаче ему валидного имени")
+    @Severity(SeverityLevel.MINOR)
     public void testCheckNameToEmboss_validName() {
         // тестовые данные
         String name = "Олег Петрович";
