@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -63,6 +63,9 @@ public class TestAccount {
 
     // тест на проверку имени с пробелом в начале
     @Test
+    @DisplayName("тест ")
+    @Description("проверка с пробелом")
+    @Severity(SeverityLevel.MINOR)
     public void testCheckNameToEmboss_atStart() {
         String name = " Александр Пушкин";
         Account account = new Account(name);
