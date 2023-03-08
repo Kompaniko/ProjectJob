@@ -13,7 +13,7 @@ import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-@DisplayName("Тест для проверки метода")
+@DisplayName("Тест для проверки метода CheckNameToEmboss")
 public class TestAccount {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -48,6 +48,9 @@ public class TestAccount {
 
     // тест на проверку имени с длиной больше 19 символов
     @Test
+    @DisplayName("тест на проверку имени с длиной больше 19 символов")
+    @Description("проверка метода CheckNameToEmboss при проверки имени с длиной больше 19 символов")
+    @Severity(SeverityLevel.MINOR)
     public void testCheckNameToEmboss_longName() {
         String name = "Анастасия Михайлова Ольгертовна";
         Account account = new Account(name);
